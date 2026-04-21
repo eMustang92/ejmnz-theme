@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tus estilos custom después */
 @layer base {
   html {
     @apply antialiased;
@@ -12,4 +11,22 @@
 
 @layer components {
   /* Componentes reutilizables aquí */
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-brand-glass/60 backdrop-blur-xl border border-brand-glass-border rounded-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-accent via-brand-violet to-brand-cyan bg-clip-text text-transparent;
+  }
+
+  .gradient-border {
+    @apply relative before:absolute before:inset-0 before:rounded-2xl before:p-px before:bg-gradient-to-r before:from-brand-accent before:via-brand-violet before:to-brand-cyan before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100;
+  }
+
+  .ring-gradient {
+    @apply ring-1 ring-transparent bg-gradient-to-br from-brand-glass to-brand-surface;
+  }
 }
