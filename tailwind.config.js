@@ -16,5 +16,11 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    function({ addVariant }) {
+      addVariant('admin-bar', '.admin-bar &');
+    },
+  ],
 };

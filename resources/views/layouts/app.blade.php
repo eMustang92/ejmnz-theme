@@ -5,32 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @php(do_action('get_header'))
     @php(wp_head())
-
     @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
 
-  <body @php(body_class())>
+  <body @php(body_class('min-h-screen flex flex-col'))>
     @php(wp_body_open())
 
-    <div id="app">
-      <a class="sr-only focus:not-sr-only" href="#main">
-        {{ __('Skip to content', 'sage') }}
-      </a>
+    <a class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4" href="#main">
+      {{ __('Skip to content', 'sage') }}
+    </a>
 
-      @include('sections.header')
+    @include('sections.header')
 
-      <main id="main" class="main">
-        @yield('content')
-      </main>
+    <main id="main" class="flex-grow">
+      @yield('content')
+    </main>
 
-      @hasSection('sidebar')
-        <aside class="sidebar">
-          @yield('sidebar')
-        </aside>
-      @endif
-
-      @include('sections.footer')
-    </div>
+    @include('sections.footer')
 
     @php(do_action('get_footer'))
     @php(wp_footer())
