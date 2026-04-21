@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tus estilos custom después */
+@layer base {
+  html {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  /* Componentes reutilizables aquí */
+}
