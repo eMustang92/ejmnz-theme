@@ -138,6 +138,11 @@ add_action('after_setup_theme', function () {
     add_theme_support('customize-selective-refresh-widgets');
 }, 20);
 
+// Hide WP Admin Bar on frontend — keeps backend access intact
+add_filter('show_admin_bar', function (bool $show): bool {
+    return is_admin();
+});
+
 /**
  * Register the theme sidebars.
  *
