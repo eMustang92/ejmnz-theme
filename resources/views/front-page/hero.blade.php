@@ -54,34 +54,34 @@
       <!-- Right: Floating orb + badges -->
       <div class="lg:col-span-5">
         <div class="relative mx-auto w-full max-w-md aspect-square">
-          <!-- Decorative circles -->
+          <!-- Decorative rings -->
           <div class="absolute inset-4 rounded-full border border-white/5"></div>
           <div class="absolute inset-12 rounded-full border border-white/5"></div>
           <div class="absolute inset-20 rounded-full border border-white/5"></div>
 
-          <!-- Center orb -->
-          <div class="absolute inset-0 flex items-center justify-center">
+          <!-- Floating center orb -->
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div class="animate-float">
-              <div class="relative inline-flex items-center justify-center" style="width: 220px; height: 220px;">
-                <div class="absolute inset-0 orb-glow animate-pulse-slow rounded-full"
-                     style="background: radial-gradient(closest-side, rgba(0,180,219,0.7), rgba(240,90,40,0.35) 55%, transparent 75%);"></div>
-                <div class="text-6xl font-bold text-gradient relative z-10">{"<>"}</div>
-              </div>
+              <div class="text-5xl font-extrabold text-gradient select-none">{"<>"}</div>
             </div>
           </div>
 
-          <!-- Floating badges -->
-          <div class="absolute top-2 left-2">
-            <x-tech-badge label="Vue.js · PHP" delay="0s" variant="float" />
+          <!-- Floating badges — positioned around orb -->
+          <div class="absolute top-4 left-0 animate-float glass rounded-xl px-3 py-2 flex items-center gap-2 text-xs" style="animation-delay: 0s;">
+            <span class="w-2 h-2 rounded-full bg-cyan-brand"></span>
+            <span class="font-mono text-white/80">Vue.js · PHP</span>
           </div>
-          <div class="absolute top-8 right-0">
-            <x-tech-badge label="Technical SEO" delay="0.5s" variant="float" />
+          <div class="absolute top-10 right-0 animate-float glass rounded-xl px-3 py-2 flex items-center gap-2 text-xs" style="animation-delay: 0.6s;">
+            <span class="w-2 h-2 rounded-full bg-coral-brand"></span>
+            <span class="font-mono text-white/80">Technical SEO</span>
           </div>
-          <div class="absolute bottom-10 left-0">
-            <x-tech-badge label="GSC · GA4" delay="1s" variant="float" />
+          <div class="absolute bottom-16 left-0 animate-float glass rounded-xl px-3 py-2 flex items-center gap-2 text-xs" style="animation-delay: 1.2s;">
+            <span class="w-2 h-2 rounded-full bg-cyan-brand"></span>
+            <span class="font-mono text-white/80">GSC · GA4</span>
           </div>
-          <div class="absolute bottom-2 right-4">
-            <x-tech-badge label="CWV 98/100" delay="1.5s" variant="float" />
+          <div class="absolute bottom-4 right-4 animate-float glass rounded-xl px-3 py-2 flex items-center gap-2 text-xs" style="animation-delay: 1.8s;">
+            <span class="w-2 h-2 rounded-full bg-coral-brand"></span>
+            <span class="font-mono text-white/80">CWV 98/100</span>
           </div>
         </div>
       </div>
