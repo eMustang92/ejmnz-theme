@@ -1,17 +1,22 @@
 <section id="top" class="relative overflow-hidden pt-28 sm:pt-32 md:pt-40 pb-20 md:pb-28">
-  <!-- Background orbs -->
-  <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-primary to-brand-dark"></div>
-  <div class="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full blur-3xl opacity-50 animate-pulse-slow"
-       style="background: radial-gradient(closest-side, rgba(6, 182, 212, 0.55), transparent 70%);"></div>
-  <div class="absolute top-24 right-[-10%] w-[620px] h-[620px] rounded-full blur-3xl opacity-45 animate-pulse-slow"
-       style="background: radial-gradient(closest-side, rgba(240, 90, 40, 0.45), transparent 70%); animation-delay: 1.5s;"></div>
+  <!-- Ambient grid + noise -->
+  <div class="absolute inset-0 bg-grid opacity-[0.55]" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-noise opacity-60 mix-blend-overlay" aria-hidden="true"></div>
+  <!-- Orb: Cyan left -->
+  <div class="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full orb-glow animate-pulse-slow"
+       style="background: radial-gradient(closest-side, rgba(0,180,219,0.55), transparent 70%);"
+       aria-hidden="true"></div>
+  <!-- Orb: Coral right -->
+  <div class="absolute top-24 right-[-10%] w-[620px] h-[620px] rounded-full orb-glow animate-pulse-slow"
+       style="background: radial-gradient(closest-side, rgba(240,90,40,0.45), transparent 70%); animation-delay: 1.5s;"
+       aria-hidden="true"></div>
 
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       <!-- Left: Text -->
       <div class="lg:col-span-7">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card text-xs font-mono tracking-wide text-white/70 mb-6">
-          <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-mono tracking-wide text-white/70 mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan-brand animate-pulse"></span>
           Florida Business Solutions · Miami · Remote Worldwide
         </div>
 
@@ -25,23 +30,23 @@
         </p>
 
         <div class="mt-8 flex flex-wrap items-center gap-3">
-          <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 rounded-xl text-[0.95rem] font-semibold bg-brand-accent text-white hover:bg-brand-accent/90 transition-colors">
+          <a href="#contact" class="btn-primary inline-flex items-center justify-center px-5 py-3 rounded-xl text-[0.95rem]">
             Schedule Free Consultation
           </a>
-          <a href="#services" class="inline-flex items-center justify-center px-5 py-3 rounded-xl text-[0.95rem] font-semibold border border-white/20 text-white hover:border-white/40 transition-colors">
+          <a href="#services" class="btn-ghost inline-flex items-center justify-center px-5 py-3 rounded-xl text-[0.95rem] font-semibold">
             Explore Services
           </a>
         </div>
 
         <div class="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-xs font-mono text-white/50">
           <span class="inline-flex items-center gap-2">
-            <span class="w-4 h-4 text-brand-cyan">✓</span> 10+ Years Experience
+            <span class="w-4 h-4 text-cyan-brand">✓</span> 10+ Years Experience
           </span>
           <span class="inline-flex items-center gap-2">
-            <span class="w-4 h-4 text-brand-cyan">✓</span> Florida · Miami Local SEO
+            <span class="w-4 h-4 text-cyan-brand">✓</span> Florida · Miami Local SEO
           </span>
           <span class="inline-flex items-center gap-2">
-            <span class="w-4 h-4 text-brand-cyan">✓</span> SEO-first Development
+            <span class="w-4 h-4 text-cyan-brand">✓</span> SEO-first Development
           </span>
         </div>
       </div>
@@ -58,8 +63,8 @@
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="animate-float">
               <div class="relative inline-flex items-center justify-center" style="width: 220px; height: 220px;">
-                <div class="absolute inset-0 animate-pulse-slow rounded-full"
-                     style="background: radial-gradient(closest-side, rgba(6, 182, 212, 0.7), rgba(240, 90, 40, 0.35) 55%, transparent 75%);"></div>
+                <div class="absolute inset-0 orb-glow animate-pulse-slow rounded-full"
+                     style="background: radial-gradient(closest-side, rgba(0,180,219,0.7), rgba(240,90,40,0.35) 55%, transparent 75%);"></div>
                 <div class="text-6xl font-bold text-gradient relative z-10">{"<>"}</div>
               </div>
             </div>
